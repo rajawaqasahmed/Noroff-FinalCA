@@ -1,0 +1,45 @@
+<div class="[ container ]">
+    <div class="[ myForm ]">
+    <form [formGroup]="contactForm" (ngSubmit)="contactForm.valid && onSubmit()">
+          <label>First Name:</label>
+          <input class="form-control" type="text" formControlName="firstName" [ngClass]="{'is-invalid': contactForm.get('firstName').touched && contactForm.get('firstName').invalid}" />
+          <div class="invalid-feedback">
+            <div>First name is required</div>
+          </div>
+        
+          <label>Last Name:</label>
+          <input class="form-control" type="text" formControlName="lastName" [ngClass]="{'is-invalid': contactForm.get('lastName').touched && contactForm.get('lastName').invalid}" />
+          <div class="invalid-feedback">
+              <div>Last name is required</div>
+          </div> 
+
+          <label>Email:</label>
+          <input class="form-control" type="text" formControlName="emailId" [ngClass]="{'is-invalid': contactForm.get('emailId').touched && contactForm.get('emailId').invalid}" />
+          <div *ngIf="contactForm.get('emailId').touched && contactForm.get('emailId').invalid" class="invalid-feedback">
+              <div *ngIf="contactForm.get('emailId').errors.required">Email is required</div>
+              <div *ngIf="contactForm.get('emailId').errors.email">Must be a valid email</div>
+          </div>  
+
+          <label>Phone Number:</label>
+          <input class="form-control" type="text" formControlName="phoneNumber" [ngClass]="{'is-invalid': contactForm.get('phoneNumber').touched && contactForm.get('phoneNumber').invalid}" />
+          <div class="invalid-feedback">
+              <div>Valid Phone number is required. Possibilities are:<br /> 
+                xxx-xxx-xxxx<br />
+                xxx.xxx.xxxx<br />
+                xxx xxx xxxx<br />
+              
+              </div>
+          </div> 
+
+          
+          <!-- <input class="form-control" type="text" formControlName="phoneNumber" [ngClass]="{'is-invalid': contactForm.get('phoneNumber').touched && contactForm.get('phoneNumber').invalid}" />
+          <div *ngIf="contactForm.get('phoneNumber').touched && contactForm.get('phoneNumber').invalid" class="invalid-feedback">
+              <div ></div>
+          </div>   -->
+                  
+            
+        <div style="text-align: center; width: 100%"><button type="submit" class="btn btn-secondary myButton">Submit</button></div>
+      </form>
+
+</div>
+</div>

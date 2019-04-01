@@ -1,10 +1,4 @@
- .card{
-     width: 45%;
-    border: solid 1px black;
-     margin-bottom: 20px;
-    margin-left: 10px;
-    padding: 10px;
- }
+
 
  .input{
     &-search {
@@ -21,8 +15,16 @@
 
 .input-group.md-form.form-sm.form-1 input{
     border: 1px solid #921515;
-    
 }
-.card-button{
-    width: 100%;
+.card{
+    &-button{
+        width: 100%;
+    }
+    &-myCard{
+        margin: 20px;
+        text-align: center;
+    }
+    &-header{
+        border-top: solid 1px #921515;
+    }
 }

@@ -11,6 +11,8 @@ import { LoginPageComponent } from './pages/login-page/login-page.component';
 import { CardSpecificComponent } from './pages/card-specific/card-specific.component';
 import { NavbarComponent } from './pages/navbar/navbar.component';
 import { FooterComponent } from './pages/footer/footer.component';
+import { ContactPageComponent } from './pages/contact-page/contact-page.component';
+import { AboutPageComponent } from './pages/about-page/about-page.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +23,8 @@ import { FooterComponent } from './pages/footer/footer.component';
     CardSpecificComponent,
     NavbarComponent,
     FooterComponent,
+    ContactPageComponent,
+    AboutPageComponent,
   ],
   imports: [
     BrowserModule,

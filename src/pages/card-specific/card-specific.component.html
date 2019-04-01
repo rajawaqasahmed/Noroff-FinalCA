@@ -1,12 +1,15 @@
 <div class="[ container ]">
   <div class=" [ row ] ">
-    <div class="[ col-sm-6 ]">
-      <img src="{{cardSelected.imageUrl}}" >
+    <div class="[ col-sm-6 ]" style="text-align: right; padding-right: 30px">
+    
+      <img src="{{cardSelected.imageUrl}}" *ngIf="cardSelected.imageUrl" /> <br />
+      <img src="../../assets/pagenotfound.png" *ngIf="!cardSelected.imageUrl" /> 
     </div>
     <div class="[ col-sm-6 ]">
-      <p>About:</p> {{cardSelected.text}}
-      <p>Rarity:{{cardSelected.rarity}}</p>
-      <p>Color:{{cardSelected.colors}}</p>
+      <h1>{{cardSelected.name}}</h1>
+      <p><b>About:</b></p> <p>{{cardSelected.text}}</p><br />
+      <p><b>Rarity:</b> {{cardSelected.rarity}}</p>
+      <p><b>Color:</b> {{cardSelected.colors}}</p>
     </div>
   </div>
 
