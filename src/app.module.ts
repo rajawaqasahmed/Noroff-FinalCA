@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app/app.component';
@@ -13,6 +13,8 @@ import { NavbarComponent } from './pages/navbar/navbar.component';
 import { FooterComponent } from './pages/footer/footer.component';
 import { ContactPageComponent } from './pages/contact-page/contact-page.component';
 import { AboutPageComponent } from './pages/about-page/about-page.component';
+import { FilterPipe } from './pages/dashboard-page/filter.pipe';
+
 
 @NgModule({
   declarations: [
@@ -25,12 +27,15 @@ import { AboutPageComponent } from './pages/about-page/about-page.component';
     FooterComponent,
     ContactPageComponent,
     AboutPageComponent,
+    FilterPipe,
+    
   ],
   imports: [
     BrowserModule,
     ReactiveFormsModule,
     routing,
-    HttpModule
+    HttpModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

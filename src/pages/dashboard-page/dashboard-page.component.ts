@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Pipe } from '@angular/core';
 import { Router } from '@angular/router';
 import { CardService } from './../../services/card-service.service';
 import 'rxjs';
@@ -9,10 +9,13 @@ import 'rxjs';
   styleUrls: ['./dashboard-page.component.scss'],
   providers: [CardService]
 })
+@Pipe({
+    name: 'textFilter'
+})
 export class DashboardPageComponent implements OnInit {
 
   public cardDetail: Array<any>;
-
+  public searchTerm: string;
   constructor(protected router: Router, protected cardService: CardService) {
    }
 

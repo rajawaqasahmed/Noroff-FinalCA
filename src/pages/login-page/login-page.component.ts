@@ -10,7 +10,7 @@ import { LoginService } from '../../services/login.service';
 })
 export class LoginPageComponent implements OnInit {
 
-  title: String = 'Please login to continue to your Dashboard';
+  title: String = 'Please login to go to dashboard';
   isUsername: Boolean = false;
   isPassword: Boolean = false;
   userObj;
