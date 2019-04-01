@@ -1,3 +1,7 @@
 .myDropDown{
     text-align: right !important;
+    &:hover{
+        background-color: #921515;
+        color: white;
+    }
 }

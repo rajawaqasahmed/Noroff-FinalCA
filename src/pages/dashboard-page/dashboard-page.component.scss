@@ -1,11 +1,16 @@
+.container{
+    padding-top: 40px !important;
+}
 
-
- .input{
+.input{
     &-search {
         width: 100%;
     }
     &-button {
         width: 100%;
+    }
+    &-group.md-form.form-sm.form-1 input{
+        border: 1px solid #921515;
     }
 }
 .row-format{
@@ -13,9 +18,6 @@
     margin-top: 5%;
 }
 
-.input-group.md-form.form-sm.form-1 input{
-    border: 1px solid #921515;
-}
 .card{
     &-button{
         width: 100%;
@@ -28,3 +30,4 @@
         border-top: solid 10px #921515;
     }
 }
+

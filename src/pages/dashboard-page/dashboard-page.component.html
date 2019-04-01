@@ -1,42 +1,29 @@
 
 <div class="[ container ]">   
-
-      <div class="[ row row-format ]">  
+      <div class="[ row ]">  
             <h3>Choose card to view card specific details</h3><br /> 
-            <div class="[ input-group md-form form-sm form-1 pl-0 ]">
-                  <div class="[ input-group-prepend ]">
-                        <button class="[ input-group-text cyan lighten-2" id="basic-text1 ]"><i class="[ fas fa-search text-white ]"
-                        aria-hidden="true"></i>Search</button>
-                  </div>
-                  <input class="[ form-control my-0 py-1 ]" type="text" placeholder="Search by name" aria-label="searchTerm" [(ngModel)]="searchTerm" />
+            <div class="[ input-group md-form form-sm ]">
+                  
+                  <input class="[ form-control ]" type="text" placeholder="Search by name" aria-label="searchTerm" [(ngModel)]="searchTerm" />
             </div>
       </div>
 </div>
       
 <div class="[ container ]">   
       <div class="[ row ]"> 
-            <div  class="[ col-sm-4 ]"  *ngFor="let card of cardDetail | filter: searchTerm">
-                  <div class="card-myCard">
-                  <!-- <span   *ngIf="card.imageUrl"> -->       
-                  <div class="[  card-container ]">
-                       <div class=" [ card-header ] "> {{ card.name }}</div> 
-                       <div class=" [ card-body ] ">
-                             <img src="{{card.imageUrl}}" *ngIf="card.imageUrl" /> <br />
-                             <img src="../../assets/pagenotfound.png" *ngIf="!card.imageUrl" /> <br />
-                             <span>Types: {{ card.types }}</span>
-                        </div> 
-                       <div class=" [ card-footer ] "><a class=" [ btn btn-outline-secondary card-button ] " (click)="onSelect(card)" routerLinkActive="active" >View More...</a>
-                  </div> 
-            </div>
-                        
-                        
-                         
-                        
-                          
-                            
+            <div class="[ col-sm-4 ]"  *ngFor="let card of cardDetail | filter: searchTerm">
+                  <div class="[ card-myCard ]"> 
+                        <div class="[  card-container ]">
+                              <div class=" [ card-header ] "> {{ card.name }}</div> 
+                              <div class=" [ card-body ] ">
+                                    <img src="{{card.imageUrl}}"  style="width:83%" *ngIf="card.imageUrl" /> 
+                                    <img src="../../assets/pagenotfound.png" style="width:83%" *ngIf="!card.imageUrl" /> <br />
+                                    <span>Types: {{ card.types }}</span>
+                              </div> 
+                              <div class=" [ card-footer ] "><a class=" [ btn btn-outline-secondary card-button ] " (click)="onSelect(card)" routerLinkActive="active" >View More...</a>
+                              </div> 
+                        </div>
                   </div>
-                  <!-- </span> -->
-            
             </div>
       </div>
 </div>

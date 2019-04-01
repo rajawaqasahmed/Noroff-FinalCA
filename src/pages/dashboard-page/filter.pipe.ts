@@ -4,7 +4,6 @@ import { Pipe, PipeTransform } from '@angular/core';
   name: 'filter'
 })
 export class FilterPipe implements PipeTransform {
-
   transform(cardDetail: any, searchTerm: any): any {
     if(searchTerm === undefined) return cardDetail;
 
@@ -12,5 +11,4 @@ export class FilterPipe implements PipeTransform {
       return card.name.toLowerCase().includes(searchTerm.toLowerCase());
     })
   }
-
 }
